@@ -1,0 +1,118 @@
+/* Assicura che il body occupi tutta l'altezza della viewport */
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Il contenuto principale deve crescere per occupare lo spazio disponibile */
+.content {
+    flex: 1;
+}
+
+
+
+/* Stile per l'header */
+header {
+    background: linear-gradient(to right, #ff5733, #c70039);
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Stile del titolo */
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+/* Navbar */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.2rem;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+nav ul li a:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* Hero section */
+.hero {
+    background: url('img/campionato.jpg') no-repeat center center;
+    background-size: cover;
+    color: white;
+    padding: 100px 0;
+    text-align: center;
+}
+
+.hero h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+/* Footer fisso */
+
+footer {
+    background-color: #333;
+    color: #fff;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+    font-size: 18px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    nav ul {
+        padding: 0;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+}
+/* CSS per rendere bella un'immagine */
+.image-style {
+    width: 100%; /* Imposta la larghezza al 100% */
+    max-width: 500px; /* Limita la larghezza massima */
+    height: auto; /* Mantiene le proporzioni dell'immagine */
+    border-radius: 15px; /* Bordi arrotondati */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Ombra per l'immagine */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Aggiunge transizione per effetti */
+}
+
+.image-style:hover {
+    transform: scale(1.05); /* Ingrandisce l'immagine quando si passa sopra con il mouse */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Ombra più intensa al passaggio del mouse */
+}
